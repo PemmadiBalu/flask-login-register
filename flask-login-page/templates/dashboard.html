@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Flask Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="auth-card">
+      <h2>Welcome, {{ username }}!</h2>
+      <p class="lead">You have successfully logged in.</p>
+
+      <div class="dashboard">
+        <div class="card">
+          <h3>Your Dashboard</h3>
+          <p>Here you can display your projects, data, or any content you want.</p>
+          <ul>
+            <li>Logged in user: <b>{{ username }}</b></li>
+            <li>Session active</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <a href="{{ url_for('logout') }}" class="btn btn-ghost">Logout</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
