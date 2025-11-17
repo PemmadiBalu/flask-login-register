@@ -25,7 +25,15 @@
       </div>
 
       <div class="mt-12">
-        <a href="{{ url_for('logout') }}" class="btn btn-ghost">Logout</a>
+        <a href="{{ url_for('logout') }}" 
+           class="btn btn-ghost" 
+           title="Logout from your account"
+           onclick="return confirm('Do you really want to logout?');">
+          🔒 Logout
+       </a>
+
+
+
       </div>
     </div>
   </div>
