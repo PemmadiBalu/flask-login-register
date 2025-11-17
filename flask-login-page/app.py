@@ -85,13 +85,15 @@ def dashboard():
         return redirect(url_for('login'))
 
 # -------- LOGOUT ROUTE --------
-@app.route('/logout', methods=['POST'])
+@app.route('/logout', methods=['GET'])
 def logout():
-    session.pop('username', None)
+    session.clear()
     return redirect(url_for('login'))
+
 
 # -------- MAIN --------
 if __name__ == '__main__':
     init_db()  # create db & table if not exist
     app.run(debug=True)
 # Run the app in debug mode for development purposes
+
